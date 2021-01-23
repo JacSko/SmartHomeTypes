@@ -13,6 +13,6 @@
 /* ============================= */
 
 #define NTF_MESSAGE_END_BYTE 0x04  /**< 0x04 (EOT) - End of transmisstion */
-
+#define NTF_MAX_MESSAGE_SIZE 255   /**< Maximum length of message */
 
 #endif
