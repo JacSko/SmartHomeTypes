@@ -23,12 +23,12 @@
  *
  * > SET/GET:
  *    - SET SYSTEM TIME:
- *    REQ: 01 01 01 00 06 0C 01 07 E5 0F 1E | (12-01-2021 15:30)
+ *    REQ: 01 01 01 00 07 0C 01 07 E5 0F 1E 0A | (12-01-2021 15:30:10)
  *    REP: 01 01 01 01 00  | REPLY OK
  *
  *    - GET SYSTEM TIME:
  *    REQ: 01 01 00 00 | GET
- *    REP: 01 01 00 01 06 0C 01 07 E5 0F 1E | (12-01-2021 15:30)
+ *    REP: 01 01 00 01 07 0C 01 07 E5 0F 1E 0A| (12-01-2021 15:30:10)
  *
  * > RELAY NOTIFICATION:
  *    NOT: 03 01 02 00 02 08 01 | RELAY 08 set to 01
@@ -39,12 +39,15 @@
  * - Detailed command usage is explained in separate document
  */
 /* ============================= */
-#define NTF_MESSAGE_DELIMITER 0x04  /**< 0x04 (EOT) - End of transmisstion */
-#define NTF_MAX_MESSAGE_SIZE 255   /**< Maximum length of message */
+#define NTF_HEADER_SIZE 5           /**< Size of header in bytes */
+#define NTF_MESSAGE_DELIMITER 0x0A  /**< 0x0A (LF) - Signalize end of message */
+#define NTF_MAX_MESSAGE_SIZE 255    /**< Maximum length of message */
 
 #define NTF_GROUP_OFFSET 0
 #define NTF_GROUP_SUBCMD_OFFSET 1
 #define NTF_GROUP_REQ_TYPE_OFFSET 2
+#define NTF_GROUP_REP_TYPE_OFFSET 3
+#define NTF_GROUP_BYTES_COUNT_OFFSET 4
 
 typedef enum
 {
@@ -90,6 +93,7 @@ typedef enum
 typedef enum
 {
    NTF_ENV_SENSOR_DATA = 1,
+   NTF_ENV_SENSOR_ERROR,
 } NTF_ENV_SUBCMDS;
 
 typedef enum
