@@ -48,9 +48,9 @@
 
 typedef enum
 {
-   REPLY_UNKNOWN, /**< State not known - used only for reply messages */
-   REPLY_OK,      /**< Command executed with success */
-   REPLY_NOK,     /**< Command executed with errors */
+   NTF_REPLY_UNKNOWN, /**< State not known - used only for reply messages */
+   NTF_REPLY_OK,      /**< Command executed with success */
+   NTF_REPLY_NOK,     /**< Command executed with errors */
 } NTF_REPLY_TYPE;
 
 typedef enum
@@ -62,46 +62,46 @@ typedef enum
 
 typedef enum
 {
-   GROUP_SYSTEM = 1,
-   GROUP_INPUTS,
-   GROUP_RELAYS,
-   GROUP_ENV,
-   GROUP_FAN,
-   GROUP_SLM
+   NTF_GROUP_SYSTEM = 1,
+   NTF_GROUP_INPUTS,
+   NTF_GROUP_RELAYS,
+   NTF_GROUP_ENV,
+   NTF_GROUP_FAN,
+   NTF_GROUP_SLM
 } NTF_GROUP;
 
 typedef enum
 {
-   SYSTEM_TIME = 1,
+   NTF_SYSTEM_TIME = 1,
 } NTF_SYSTEM_SUBCMDS;
 
 typedef enum
 {
-   INPUTS_STATE = 1,
-   INPUTS_STATE_ALL,
+   NTF_INPUTS_STATE = 1,
+   NTF_INPUTS_STATE_ALL,
 } NTF_INPUTS_SUBCMDS;
 
 typedef enum
 {
-   RELAYS_STATE = 1,
-   RELAYS_STATE_ALL,
+   NTF_RELAYS_STATE = 1,
+   NTF_RELAYS_STATE_ALL,
 } NTF_RELAYS_SUBCMDS;
 
 typedef enum
 {
-   ENV_SENSOR_DATA = 1,
+   NTF_ENV_SENSOR_DATA = 1,
 } NTF_ENV_SUBCMDS;
 
 typedef enum
 {
-   FAN_STATE = 1,
+   NTF_FAN_STATE = 1,
 } NTF_FAN_SUBCMDS;
 
 typedef enum
 {
-   SLM_STATE = 1,
-   SLM_PROGRAM_ID,
-   SLM_OFF_EFFECT_STATE,
+   NTF_SLM_STATE = 1,
+   NTF_SLM_PROGRAM_ID,
+   NTF_SLM_OFF_EFFECT_STATE,
 } NTF_SLM_SUBCMDS;
 
 
