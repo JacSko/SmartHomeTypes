@@ -105,7 +105,6 @@ typedef enum
 {
    NTF_SLM_STATE = 1,
    NTF_SLM_PROGRAM_ID,
-   NTF_SLM_OFF_EFFECT_STATE,
 } NTF_SLM_SUBCMDS;
 
 
