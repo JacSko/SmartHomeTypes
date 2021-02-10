@@ -39,15 +39,13 @@
  * - Detailed command usage is explained in separate document
  */
 /* ============================= */
-#define NTF_HEADER_SIZE 5           /**< Size of header in bytes */
+#define NTF_HEADER_SIZE 3           /**< Size of header in bytes */
 #define NTF_MESSAGE_DELIMITER 0x0A  /**< 0x0A (LF) - Signalize end of message */
 #define NTF_MAX_MESSAGE_SIZE 255    /**< Maximum length of message */
 
-#define NTF_GROUP_OFFSET 0
-#define NTF_GROUP_SUBCMD_OFFSET 1
-#define NTF_GROUP_REQ_TYPE_OFFSET 2
-#define NTF_GROUP_REP_TYPE_OFFSET 3
-#define NTF_GROUP_BYTES_COUNT_OFFSET 4
+#define NTF_ID_OFFSET 0
+#define NTF_REQ_TYPE_OFFSET 1
+#define NTF_BYTES_COUNT_OFFSET 2
 
 typedef enum
 {
@@ -73,41 +71,21 @@ typedef enum
    NTF_GROUP_SLM
 } NTF_GROUP;
 
+
 typedef enum
 {
    NTF_SYSTEM_TIME = 1,
    NTF_SYSTEM_STATUS,
-} NTF_SYSTEM_SUBCMDS;
-
-typedef enum
-{
-   NTF_INPUTS_STATE = 1,
+   NTF_INPUTS_STATE,
    NTF_INPUTS_STATE_ALL,
-} NTF_INPUTS_SUBCMDS;
-
-typedef enum
-{
-   NTF_RELAYS_STATE = 1,
+   NTF_RELAYS_STATE,
    NTF_RELAYS_STATE_ALL,
-} NTF_RELAYS_SUBCMDS;
-
-typedef enum
-{
-   NTF_ENV_SENSOR_DATA = 1,
+   NTF_ENV_SENSOR_DATA,
    NTF_ENV_SENSOR_ERROR,
-} NTF_ENV_SUBCMDS;
-
-typedef enum
-{
-   NTF_FAN_STATE = 1,
-} NTF_FAN_SUBCMDS;
-
-typedef enum
-{
-   NTF_SLM_STATE = 1,
+   NTF_FAN_STATE,
+   NTF_SLM_STATE,
    NTF_SLM_PROGRAM_ID,
-} NTF_SLM_SUBCMDS;
-
+} NTF_CMD_ID;
 
 
 #endif
