@@ -76,6 +76,7 @@ typedef enum
 typedef enum
 {
    NTF_SYSTEM_TIME = 1,
+   NTF_SYSTEM_STATUS,
 } NTF_SYSTEM_SUBCMDS;
 
 typedef enum
