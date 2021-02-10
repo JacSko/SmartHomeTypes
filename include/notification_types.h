@@ -63,17 +63,6 @@ typedef enum
 
 typedef enum
 {
-   NTF_GROUP_SYSTEM = 1,
-   NTF_GROUP_INPUTS,
-   NTF_GROUP_RELAYS,
-   NTF_GROUP_ENV,
-   NTF_GROUP_FAN,
-   NTF_GROUP_SLM
-} NTF_GROUP;
-
-
-typedef enum
-{
    NTF_SYSTEM_TIME = 1,
    NTF_SYSTEM_STATUS,
    NTF_INPUTS_STATE,
