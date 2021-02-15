@@ -40,7 +40,7 @@
  */
 /* ============================= */
 #define NTF_HEADER_SIZE 3           /**< Size of header in bytes */
-#define NTF_MESSAGE_DELIMITER 0x0A  /**< 0x0A (LF) - Signalize end of message */
+#define NTF_MESSAGE_DELIMITER 0xFF  /**< 0x0A (LF) - Signalize end of message */
 #define NTF_MAX_MESSAGE_SIZE 255    /**< Maximum length of message */
 
 #define NTF_ID_OFFSET 0
