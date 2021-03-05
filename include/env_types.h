@@ -12,19 +12,6 @@
  */
 /* ============================= */
 
-/** Represents HW device - DHT sensor */
-typedef enum DHT_SENSOR_ID
-{
-   DHT_SENSOR1,
-   DHT_SENSOR2,
-   DHT_SENSOR3,
-   DHT_SENSOR4,
-   DHT_SENSOR5,
-   DHT_SENSOR6,
-   DHT_ENUM_MAX
-} DHT_SENSOR_ID;
-
-
 typedef enum ENV_EVENT
 {
    ENV_EV_NEW_DATA,     /**< New data event */
