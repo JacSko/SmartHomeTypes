@@ -3,6 +3,7 @@
 
 
 #include "env_types.h"
+#include "dht_types.h"
 /* ============================= */
 /**
  * @file system_config_values.h
@@ -44,6 +45,8 @@
 #define BLUETOOTH_FORWARDING_PORT 1111 /* Logs, string command parsing capability */
 #define HW_STUB_CONTROL_PORT 2222      /* Controlling of HW stub (setting i2c boards state, temperatures, etc */
 #define WIFI_NTF_FORWARDING_PORT 4444  /* Communication interface for Raspberry Application */
+#define SOCK_MSG_HEADER_SIZE 4         /* Size of the message which is sent before actual message */
+#define SOCK_RECV_TIMEOUT_S 1          /* Timeout [s] for reading from socket */
 
 /* =============================
  *         UART config
