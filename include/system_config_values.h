@@ -47,7 +47,8 @@
 #define WIFI_NTF_FORWARDING_PORT 4444  /* Communication interface for Raspberry Application */
 #define SOCK_MSG_HEADER_SIZE 4         /* Size of the message which is sent before actual message */
 #define SOCK_RECV_TIMEOUT_S 1          /* Timeout [s] for reading from socket */
-
+#define SOCK_CLIENT_WAIT_TMOUT_S 5     /* Timeout for waiting until all clients connects */
+#define TEST_BINARY_ABSOLUTE_PATH "/home/sj6tmb/projects/smarthome/build_sim/smarthome_sim" /* Path to binary under test */
 /* =============================
  *         UART config
  * =============================*/
