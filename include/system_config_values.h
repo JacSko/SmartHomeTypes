@@ -172,6 +172,7 @@ typedef struct ENV_MATCH
                        {DHT_SENSOR6, ENV_KITCHEN}}
 
 #define ENV_LOOP_MEASURE_RUNNING 1
+#define ENV_MEASURE_PERIOD_DEF_MS 5000
 #define ENV_MAX_CHECKSUM_RATE 99   /* parameter not used */
 #define ENV_MAX_NORESPONSE_RATE 99 /* parameter not used */
 
