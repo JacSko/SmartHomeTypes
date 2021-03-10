@@ -3,7 +3,7 @@
 
 /* ============================= */
 /**
- * @file edht_types.h
+ * @file dht_types.h
  *
  * @brief Common enum types related to DHT driver module.
  *
@@ -12,6 +12,14 @@
  */
 /* ============================= */
 
+typedef enum DHT_STATUS
+{
+   DHT_STATUS_OK,             /**< Measurement performed successfully, data is valid */
+   DHT_STATUS_NO_RESPONSE,    /**< No response from device in defined time */
+   DHT_STATUS_CHECKSUM_ERROR, /**< Transmission fault - checksum is incorrect */\
+   DHT_STATUS_ERROR,          /**< Common error */
+   DHT_STATUS_UNKNOWN,
+} DHT_STATUS;
 
 typedef enum DHT_SENSOR_TYPE
 {
