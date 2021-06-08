@@ -21,6 +21,10 @@
 /* =============================
  *        Global counts
  * =============================*/
+#define SYSTEM_VERSION "1.0.0"
+/* =============================
+ *        Global counts
+ * =============================*/
 #define RELAYS_RELAY_COUNT 16
 #define INPUTS_INPUT_COUNT 16
 #define ENV_DEFAULT_SENSORS_COUNT 6
