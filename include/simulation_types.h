@@ -12,6 +12,11 @@
  */
 /* ============================= */
 
+#define HWSTUB_EVENT_OFFSET 0
+#define HWSTUB_PAYLOAD_SIZE_OFFSET 1
+#define HWSTUB_PAYLOAD_START_OFFSET 2
+#define HWSTUB_HEADER_SIZE 2
+
 typedef enum
 {
    I2C_STATE_SET = 1,       /**< Sets current state of I2C board - in raw format, e.g. 0xFFFF */
